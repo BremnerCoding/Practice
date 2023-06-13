@@ -1,15 +1,41 @@
-let array = ["hello", "hi", 4, "cool", 5, true];
-let evenLengthStrings= [];
+// How to write a function
 
-//function searchArray(array) {
+function functionName(parameters) {
+    //code block to execute
+};
+
+function helloWorld() {
+    console.log("Hello World!");
+};
+
+
+// How to invoke a function 
+helloWorld();
+
+
+// More practice on creating functions
+function addingNumbers(num1, num2) {
+    let result;
+    result = num1 + num2;
+    console.log(result);
+    return result;
+};
+
+addingNumbers(25, 57);
+
+function evenLengthStrings(array) {
+    let evenLengthStrings = [];
     for(let i = 0; i < array.length; i++) {
-        let element = array[i];
-        if(typeof array[i] === "string" && element.length % 2 === 0) {
-            evenLengthStrings.push(array[i]);
+        let arrayElement = array[i];
+        if(typeof arrayElement === "string" && arrayElement.length % 2 === 0) {
+            evenLengthStrings.push(arrayElement);
+            console.log(evenLengthStrings);
         }
-        //return evenLengthStrings;
+        if(array.length === 0) {
+            evenLengthStrings = [];
+            console.log(evenLengthStrings);
+        }
     }
-//}
+}
 
-console.log(evenLengthStrings);
-console.log(array);
+evenLengthStrings(["cool", "hi"]);
